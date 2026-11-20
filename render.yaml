@@ -1,0 +1,8 @@
+# Render Blueprint: New + > Blueprint, pilih repo ini.
+services:
+  - type: web
+    name: coffee-fermentation-lab
+    runtime: docker
+    plan: starter            # torch + scikit-learn butuh RAM >= 1 GB untuk training yang nyaman
+    healthCheckPath: /healthz
+    autoDeploy: true
